@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrocoTrampo</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #000;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header nav a {
+      margin-left: 20px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Banner principal full-width */
+    .banner {
+      background-color: #ffec00;
+      color: #000;
+      text-align: center;
+      padding: 80px 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      width: 100%;
+      /* remove margin auto */
+    }
+
+    /* Comentário para imagem no banner */
+    /* Aqui você pode colocar uma imagem dentro do banner usando <img src="caminho" class="banner-img"> */
+
+    /* Seção de cards */
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 40px 20px;
+    }
+
+    .card {
+      background-color: #f7f7f7;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1 1 200px;
+      max-width: 250px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    /* CTA */
+    .cta-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background-color: #ffec00;
+      color: #000;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+      background-color: #f2e500;
+    }
+
+    /* Carousel simples */
+    .carousel {
+      max-width: 1200px;
+      margin: 40px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .carousel img {
+      width: 100%;
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 30px 50px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    footer div {
+      margin-bottom: 15px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">TrocoTrampo</div>
+    <nav>
+      <a href="#">Trampos</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <div class="banner">
+    Troque serviço<br>por serviço
+    <!-- Aqui você pode adicionar uma imagem de fundo ou dentro do banner -->
+  </div>
+
+  <!-- Carousel de imagens -->
+  <div class="carousel">
+    <img src="https://via.placeholder.com/1200x400?text=Imagem+1" alt="Imagem 1">
+    <!-- Substitua pelos caminhos das suas imagens -->
+  </div>
+
+  <!-- Cards -->
+  <div class="cards-container">
+    <div class="card">
+      <h3>Oportunidade</h3>
+      <p>Bote pra frente projetos sem necessidade de transação financeira</p>
+    </div>
+    <div class="card">
+      <h3>Garantia</h3>
+      <p>Só liberamos arquivos quando as 2 partes concordam</p>
+    </div>
+    <div class="card">
+      <h3>Praticidade</h3>
+      <p>Eficiência de comunicação e troca de experiências</p>
+    </div>
+    <div class="card">
+      <h3>Comunidade</h3>
+      <p>Conexão com profissionais do país inteiro</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-container">
+    <a href="cadastro.html" target="_blank" rel="noopener noreferrer" class="cta-btn">
+      QUERO ME CADASTRAR AGORA
+    </a>
+  </div>
+
+   <!-- FOOTER ESCURO -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-item">
+          <p><strong>Endereço</strong></p>
+          <p>Av. Rio Branco, 193 - Recife, PE, 50000-000</p>
+        </div>
+        <div class="footer-item">
+          <p><strong>Contato</strong></p>
+          <p>(81) 3181-4868</p>
+        </div>
+        <div class="footer-item">
+          <p><strong>Link</strong></p>
+          <p><a href="http://www.siepe.educacao.pe.gov.br/MapaCoordenadoria/detEscola.do?codUnidade=606264" target="_blank">Portal Siepe</a></p>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>

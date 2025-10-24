@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TrocoTrampo - Login</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #fff;
+        color: #000;
+      }
+
+      /* ===== HEADER ===== */
+      .navbar {
+        background-color: #000;
+        padding: 1rem 2rem;
+      }
+
+      .navbar-brand {
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+
+      .nav-link {
+        color: #fff !important;
+        font-weight: 600;
+      }
+
+      .nav-link:hover {
+        color: #ffeb00 !important;
+      }
+
+      /* ===== FORMULÁRIO ===== */
+      .form-section {
+        max-width: 400px;
+        margin: 5rem auto;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+        background-color: #fff;
+      }
+
+      .form-section legend {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      input.form-control {
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 10px;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+
+      input.form-control:focus {
+        border-color: #ffeb00;
+        box-shadow: 0 0 0 0.2rem rgba(255, 235, 0, 0.3);
+      }
+
+      /* ===== BOTÃO ===== */
+      .btn-primary {
+        background-color: #ffeb00;
+        border: none;
+        color: #000;
+        font-weight: 700;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        width: 100%;
+        transition: all 0.2s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #f7d600;
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        background-color: #111;
+        color: #fff;
+        padding: 2rem 0;
+      }
+
+      footer a {
+        color: #ffeb00;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto;
+        gap: 1rem;
+      }
+
+      .footer-item {
+        flex: 1 1 200px;
+      }
+
+      .footer-item p {
+        margin: 0.25rem 0;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">trocotrampo</a>
+      <div class="ms-auto">
+        <a class="nav-link d-inline px-2" href="#">TRAMPOS</a>
+        <a class="nav-link d-inline px-2" href="#">SOBRE</a>
+        <a class="nav-link d-inline px-2" href="#">CONTATO</a>
+        <a class="nav-link d-inline px-2" href="#">LOGIN</a>
+      </div>
+    </nav>
+
+    <!-- FORMULÁRIO DE LOGIN -->
+    <section class="form-section">
+      <form>
+        <legend>Login</legend>
+
+        <div class="mb-3">
+          <label for="inputEmail" class="form-label">E-mail:</label>
+          <input type="email" id="inputEmail" class="form-control" placeholder="Digite seu e-mail" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="inputPassword" class="form-label">Senha:</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Digite sua senha" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-item">
+          <p><strong>Endereço</strong></p>
+          <p>Av. Rio Branco, 193 - Recife, PE, 50000-000</p>
+        </div>
+        <div class="footer-item">
+          <p><strong>Contato</strong></p>
+          <p>(81) 3181-4868</p>
+        </div>
+        <div class="footer-item">
+          <p><strong>Link</strong></p>
+          <p><a href="http://www.siepe.educacao.pe.gov.br/MapaCoordenadoria/detEscola.do?codUnidade=606264" target="_blank">Portal Siepe</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
