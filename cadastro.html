@@ -15,60 +15,82 @@
         color: #000;
       }
 
-      /* ===== HEADER PRETO ===== */
+      /* ===== HEADER ===== */
       .navbar {
-        background-color: #000 !important;
-        border-bottom: none;
-        padding: 1rem 2rem;
+        background-color: #000;
+        padding: 15px 40px;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+        max-width: 1100px;
+        margin: 25px auto 0 auto;
       }
 
       .navbar-brand {
-        color: #fff !important;
+        color: #fff;
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+        text-transform: lowercase;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .navbar-brand img {
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+        border: 2px solid #ffe711;
+        background-color: #111;
+        object-fit: cover;
       }
 
       .nav-link {
         color: #fff !important;
         font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
       }
 
       .nav-link:hover {
-        color: #ffeb00 !important;
+        color: #ffe711 !important;
+        transform: scale(1.05);
       }
 
-      /* ===== SEÇÃO DE DESTAQUE FULL WIDTH ===== */
+      /* ===== BANNER ===== */
       .highlight-section {
-        background-color: #ffeb00;
-        padding: 6rem 1rem;
+        background-color: #ffe711;
+        color: #000;
         text-align: center;
-        margin: 0;
-      }
-
-      .highlight-section h2 {
-        font-weight: 700;
-        font-size: 2.5rem;
+        padding: 70px 30px;
+        font-size: 2rem;
+        font-weight: bold;
+        border-radius: 25px;
+        width: 85%;
+        max-width: 900px;
+        margin: 50px auto 0 auto;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
       }
 
       @media (max-width: 768px) {
-        .highlight-section h2 {
-          font-size: 2rem;
+        .highlight-section {
+          font-size: 1.7rem;
         }
       }
 
       /* ===== BOTÃO AMARELO ===== */
       .btn-primary {
-        background-color: #ffeb00;
+        background-color: #ffe711;
         border: none;
         color: #000;
         font-weight: 700;
         padding: 0.75rem 1.5rem;
         border-radius: 5px;
-        transition: 0.3s;
+        transition: all 0.2s ease;
       }
 
       .btn-primary:hover {
         background-color: #f7d600;
+        transform: scale(1.05);
       }
 
       /* ===== CAMPOS DO FORMULÁRIO ===== */
@@ -125,20 +147,23 @@
 
   <body>
 
-    <!-- HEADER PRETO -->
+    <!-- HEADER -->
     <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="#">TrocoTrampo</a>
+      <a class="navbar-brand" href="index.html">
+        <img src="Banco de imagens/logo2.png" alt="Logo TrocoTrampo">
+        trocotrampo
+      </a>
       <div class="ms-auto">
-        <a class="nav-link d-inline px-2" href="#">TRAMPOS</a>
-        <a class="nav-link d-inline px-2" href="#">SOBRE</a>
-        <a class="nav-link d-inline px-2" href="#">CONTATO</a>
-        <a class="nav-link d-inline px-2" href="#">LOGIN</a>
+        <a class="nav-link d-inline px-2" href="feed.html">TRAMPOS</a>
+        <a class="nav-link d-inline px-2" href="sobre.html">SOBRE</a>
+        <a class="nav-link d-inline px-2" href="contato.html">CONTATO</a>
+        <a class="nav-link d-inline px-2" href="login.html">LOGIN</a>
       </div>
     </nav>
 
-    <!-- SEÇÃO DE DESTAQUE FULL WIDTH -->
-    <section class="highlight-section w-100">
-      <h2>Troco serviço<br>por serviço</h2>
+    <!-- BANNER -->
+    <section class="highlight-section">
+      Troco serviço<br>por serviço
     </section>
 
     <!-- FORMULÁRIO -->

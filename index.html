@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TrocoTrampo</title>
   <style>
-    /* Reset básico */
+    /* ===== RESET ===== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: "Inter", Arial, sans-serif;
     }
 
     body {
       background-color: #fff;
-      color: #000;
+      color: #111;
     }
 
     a {
@@ -23,58 +23,145 @@
       color: inherit;
     }
 
-    /* Header */
+    /* ===== HEADER ===== */
     header {
       background-color: #000;
       color: #fff;
-      padding: 15px 50px;
+      padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+      max-width: 1100px;
+      margin: 25px auto 0 auto;
     }
 
-    header nav a {
-      margin-left: 20px;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.6rem;
       color: #fff;
-      font-weight: bold;
+      text-transform: lowercase;
     }
 
-    /* Banner principal full-width */
+    .logo img {
+      height: 55px;
+      width: 55px;
+      border-radius: 50%;
+      border: 2px solid #ffe711;
+      background-color: #111;
+      object-fit: cover;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffe711;
+      transform: scale(1.05);
+    }
+
+    /* ===== BANNER ===== */
     .banner {
-      background-color: #ffec00;
+      background-color: #ffe711;
       color: #000;
       text-align: center;
-      padding: 80px 20px;
+      padding: 70px 30px;
       font-size: 2rem;
       font-weight: bold;
-      width: 100%;
-      /* remove margin auto */
+      border-radius: 25px;
+      width: 85%;
+      max-width: 900px;
+      margin: 50px auto 0 auto;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     }
 
-    /* Comentário para imagem no banner */
-    /* Aqui você pode colocar uma imagem dentro do banner usando <img src="caminho" class="banner-img"> */
+    /* ===== CAROUSEL ===== */
+    .carousel {
+      max-width: 900px;
+      height: 350px;
+      margin: 50px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
 
-    /* Seção de cards */
+    .carousel-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .carousel-track img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 20px;
+      flex-shrink: 0;
+    }
+
+    .carousel button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #ffe711;
+      border: none;
+      font-size: 2rem;
+      padding: 8px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+      transition: background-color 0.3s;
+    }
+
+    .carousel button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .carousel .prev { left: 15px; }
+    .carousel .next { right: 15px; }
+
+    /* ===== CARDS ===== */
     .cards-container {
       display: flex;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      margin: 40px 20px;
+      margin: 60px 20px;
     }
 
     .card {
-      background-color: #f7f7f7;
-      padding: 20px;
-      border-radius: 10px;
+      background-color: #fafafa;
+      padding: 25px;
+      border-radius: 15px;
       flex: 1 1 200px;
       max-width: 250px;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     }
 
     .card h3 {
       margin-bottom: 10px;
+      color: #000;
     }
 
     .card p {
@@ -82,48 +169,39 @@
       color: #333;
     }
 
-    /* CTA */
+    /* ===== CTA ===== */
     .cta-container {
       text-align: center;
-      margin: 40px 0;
+      margin: 50px 0;
     }
 
     .cta-btn {
       display: inline-block;
-      background-color: #ffec00;
+      background-color: #ffe711;
       color: #000;
       padding: 12px 25px;
-      border-radius: 8px;
+      border-radius: 30px;
       font-weight: bold;
       transition: 0.3s;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
 
     .cta-btn:hover {
-      background-color: #f2e500;
+      background-color: #f2db00;
+      transform: scale(1.05);
     }
 
-    /* Carousel simples */
-    .carousel {
-      max-width: 1200px;
-      margin: 40px auto;
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-    .carousel img {
-      width: 100%;
-      display: block;
-    }
-
-    /* Footer */
+    /* ===== FOOTER ===== */
     footer {
       background-color: #000;
       color: #fff;
-      padding: 30px 50px;
+      padding: 40px 50px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      border-radius: 20px 20px 0 0;
+      max-width: 1100px;
+      margin: 60px auto 20px auto;
     }
 
     footer div {
@@ -131,38 +209,44 @@
     }
 
     footer a {
-      color: #fff;
+      color: #ffe711;
       text-decoration: underline;
     }
-
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header>
-    <div class="logo">TrocoTrampo</div>
+    <a href="index.html" class="logo">
+      <img src="Banco de imagens/logo2.png" alt="Logo TrocoTrampo">
+      trocotrampo
+    </a>
     <nav>
-      <a href="#">Trampos</a>
-      <a href="#">Sobre</a>
-      <a href="#">Contato</a>
-      <a href="#">Login</a>
+      <a href="feed.html">TRAMPOS</a>
+      <a href="sobre.html">SOBRE</a>
+      <a href="contato.html">CONTATO</a>
+      <a href="login.html">LOGIN</a>
     </nav>
   </header>
 
-  <!-- Banner -->
+  <!-- BANNER -->
   <div class="banner">
     Troque serviço<br>por serviço
-    <!-- Aqui você pode adicionar uma imagem de fundo ou dentro do banner -->
   </div>
 
-  <!-- Carousel de imagens -->
-  <div class="carousel">
-    <img src="https://via.placeholder.com/1200x400?text=Imagem+1" alt="Imagem 1">
-    <!-- Substitua pelos caminhos das suas imagens -->
+  <!-- CAROUSEL -->
+  <div class="carousel" id="carousel">
+    <button class="prev">❮</button>
+    <div class="carousel-track">
+      <img src="Banco de imagens/Carrossel/1.jpg" alt="Imagem 1">
+      <img src="Banco de imagens/Carrossel/5.jpg" alt="Imagem 5">
+  
+    </div>
+    <button class="next">❯</button>
   </div>
 
-  <!-- Cards -->
+  <!-- CARDS -->
   <div class="cards-container">
     <div class="card">
       <h3>Oportunidade</h3>
@@ -189,23 +273,43 @@
     </a>
   </div>
 
-   <!-- FOOTER ESCURO -->
-    <footer>
-      <div class="footer-container">
-        <div class="footer-item">
-          <p><strong>Endereço</strong></p>
-          <p>Av. Rio Branco, 193 - Recife, PE, 50000-000</p>
-        </div>
-        <div class="footer-item">
-          <p><strong>Contato</strong></p>
-          <p>(81) 3181-4868</p>
-        </div>
-        <div class="footer-item">
-          <p><strong>Link</strong></p>
-          <p><a href="http://www.siepe.educacao.pe.gov.br/MapaCoordenadoria/detEscola.do?codUnidade=606264" target="_blank">Portal Siepe</a></p>
-        </div>
-      </div>
-    </footer>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-item">
+      <p><strong>Endereço</strong></p>
+      <p>Av. Rio Branco, 193 - Recife, PE, 50000-000</p>
+    </div>
+    <div class="footer-item">
+      <p><strong>Contato</strong></p>
+      <p>(81) 3181-4868</p>
+    </div>
+    <div class="footer-item">
+      <p><strong>Link</strong></p>
+      <p><a href="http://www.siepe.educacao.pe.gov.br/MapaCoordenadoria/detEscola.do?codUnidade=606264" target="_blank">Portal Siepe</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    });
+
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+  </script>
 
 </body>
 </html>
